@@ -27,9 +27,9 @@ const resolvers = {
         return user;
     },
     createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
+      const vote = await User.findOneAndUpdate(
         { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
+        { $inc: { [`services${techNum}_votes`]: 1 } },
         { new: true }
       );
       return vote;
