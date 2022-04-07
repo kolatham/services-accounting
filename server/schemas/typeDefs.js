@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Services {
     _id: ID!
-    name: String!
+    description: String!
   }
 
   type User {
