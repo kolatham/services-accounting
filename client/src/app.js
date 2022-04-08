@@ -43,7 +43,7 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Switch>
-        <Route exact path={["/", "/movies"]} component={ServicesList}></Route>
+        <Route exact path={["/", "/servicesList"]} component={ServicesList}></Route>
         <Route
           path="addReview/review"
           render={(props) => <AddReview {...props} user={user} />}
