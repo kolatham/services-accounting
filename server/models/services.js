@@ -15,6 +15,14 @@ const servicesSchema = new Schema({
     type: String,
     required: true,
   },
+  servicesLikes_votes: {
+    type: Number,
+    default: 0,
+  },
+  servicesDislikes_votes: {
+    type: Number,
+    default: 0,
+  },
 });
 
 module.exports = servicesSchema;

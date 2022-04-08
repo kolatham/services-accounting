@@ -1,17 +1,18 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Services {
-    _id: ID!
-    description: String!
-  }
-
   type User {
     _id: ID!
-    services1: String!
-    services2: String!
-    services1_votes: Int
-    services2_votes: Int
+    username: String!
+  }
+
+  type services {
+    _id: ID!
+    title : String!
+    description: String!
+    link: String!
+    servicesLikes_votes: Int
+    servicesDislikes_votes: Int
   }
 
   type Query {
@@ -20,9 +21,9 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createUser(services1: String!, services2: String!): User
-    updateUser(services1: String!, services2: String!): User
-    deleteUser(services1: String!, services2: String!): User
+    createUser(username: String!): User
+    updateUser(username: String!): User
+    deleteUser(username: String!): User
     createVote(_id: String!, techNum: Int!): User
   }
 `;
