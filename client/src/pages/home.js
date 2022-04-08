@@ -24,7 +24,7 @@ const Home = () => {
               return (
                 <li key={services._id}>
                   <Link to={{ pathname: `/services/${services._id}` }}>
-                    {user.servicesLikes} vs. {user.servicesDislikes}
+                    {services.servicesLikes} vs. {services.servicesDislikes}
                   </Link>
                 </li>
               );
