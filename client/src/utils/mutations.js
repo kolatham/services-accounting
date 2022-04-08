@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const CREATE_USER = gql`
-  mutation createUser($services1: String!, $services2: String!) {
-    createUser(services1: $services1, services2: $services2) {
+  mutation createUser($email: String!, $username: String!, $password2: String!) {
+    createUser($email: String!, $username: String!, $password2: String!) {
       _id
       username
       email
@@ -12,8 +12,8 @@ export const CREATE_USER = gql`
 `;
 
 export const UPDATE_USER = gql`
-  mutation updateUser($services1: String!, $services2: String!) {
-    updateUser(services1: $services1, services2: $services2) {
+  mutation updateUser($email: String!, $username: String!, $password2: String!) {
+    updateUser(services1: $email: String!, $username: String!, $password2: String!) {
       _id
       username
       email

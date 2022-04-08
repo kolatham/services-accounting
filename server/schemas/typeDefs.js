@@ -4,6 +4,10 @@ const typeDefs = gql`
   type User {
     _id: ID!
     username: String!
+    email: String!
+    password: String!
+    savedServices: [serviceSchema]
+
   }
 
   type services {
@@ -21,8 +25,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createUser(username: String!): User
-    updateUser(username: String!): User
+    createUser(email: String!, username: String!, password: String!): User
+    updateUser(email: String!, username: String!, password: String!, savedServices:): User
     deleteUser(username: String!): User
     createVote(_id: String!, techNum: Int!): User
   }

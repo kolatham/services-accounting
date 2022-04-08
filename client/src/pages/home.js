@@ -33,7 +33,7 @@ const Home = () => {
         )}
       </div>
       <div className="card-footer text-center m-3">
-        <h2>How was the Service?</h2>
+        <h2>How was this Service?</h2>
         <Link to="/services">
           <button className="btn btn-lg btn-danger">Vote!</button>
         </Link>
