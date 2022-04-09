@@ -12,8 +12,8 @@ export const CREATE_USER = gql`
 `;
 
 export const UPDATE_USER = gql`
-  mutation updateUser($email: String!, $username: String!, $password2: String!) {
-    updateUser(services1: $email: String!, $username: String!, $password2: String!) {
+  mutation updateUser($email: String!, $username: String!, $password2: String!, $savedServices: [serviceSchema]) {
+    updateUser(services1: $email: String!, $username: String!, $password2: String!, $savedServices: [serviceSchema]) {
       _id
       username
       email
@@ -24,8 +24,8 @@ export const UPDATE_USER = gql`
 `;
 
 export const DELETE_USER = gql`
-  mutation deleteUser($services1: String!, $services2: String!) {
-    deleteUser(services1: $services1, services2: $services2) {
+  mutation deleteUser($email: String!, $username: String!, $password2: String!, $savedServices: [serviceSchema]) {
+    deleteUser($email: String!, $username: String!, $password2: String!, $savedServices: [serviceSchema]) {
       _id
       username
       email
