@@ -26,10 +26,10 @@ const resolvers = {
         const user = await User.delete(args);
         return user;
     },
-    createVote: async (parent, { _id, techNum }) => {
+    createVote: async (parent, { _id, serviceNum }) => {
       const vote = await User.findOneAndUpdate(
         { _id },
-        { $inc: { [`services${techNum}_votes`]: 1 } },
+        { $inc: { [`services${serviceNum}_votes`]: 1 } },
         { new: true }
       );
       return vote;
