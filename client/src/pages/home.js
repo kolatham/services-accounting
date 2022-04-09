@@ -15,7 +15,7 @@ const Home = () => {
         <h1>Welcome to Accounting!</h1>
       </div>
       <div className="card-body m-5">
-        <h2>Here is a list of services you can vote on:</h2>
+        <h2>Here is a list of services you can use:</h2>
         {loading ? (
           <div>Loading...</div>
         ) : (

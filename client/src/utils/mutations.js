@@ -36,8 +36,8 @@ export const DELETE_USER = gql`
 `;
 
 export const CREATE_VOTE = gql`
-  mutation createVote($_id: String!, $techNum: Int!) {
-    createVote(_id: $_id, techNum: $techNum) {
+  mutation createVote($_id: String!, $serviceNum: Int!) {
+    createVote(_id: $_id, serviceNum: $serviceNum) {
       _id
       title
       description
