@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react'
 
 import { Link } from 'react-router-dom'
@@ -108,3 +109,16 @@ const Service = props => {
 }
 
 export default Service;
+=======
+import React from 'react'
+
+function ServicesList() {
+    return(
+        <div>
+            Services List
+
+        </div>
+    );
+}
+export default ServicesList
+>>>>>>> 00938670d56c6e9039c51bae99715a8a6ad807bd

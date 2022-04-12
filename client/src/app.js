@@ -1,14 +1,15 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddReview from "./components/add-review";
 import ServicesList from "./components/services-list";
 import SingleService from "./components/single-service";
 import Login from "./components/login";
+import Header from "./components/navbar"
+import Layout from "./components/layout"
 
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -23,41 +24,32 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand>Service Reviews</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link>
-              <Link to={"/servicesList"}>Services</Link>
-            </Nav.Link>
-            <Nav.Link>
-              {user ? (
-                <a onClick={logout}>Logout User</a>
-              ) : (
-                <Link to={"/login"}>Login</Link>
-              )}
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <Switch>
-        <Route exact path={["/", "/servicesList"]} component={ServicesList}></Route>
+    
+
+      <Routes>
+        <Route path = "/" element = {<Layout user = {user} logout = {logout}/>}> 
+        <Route path= "services-list" element={<ServicesList/>}/>
         <Route
-          path="addReview/review"
-          render={(props) => <AddReview {...props} user={user} />}
+          path="review"
+          element={ <AddReview  user={user} />}
         ></Route>
         <Route
+<<<<<<< HEAD
           path="/Service/:id/"
           render={(props) => <ServicesList {...props} user={user} />}
+=======
+          path="Service/:id/"
+          element={<SingleService user={user} />}
+>>>>>>> 00938670d56c6e9039c51bae99715a8a6ad807bd
         ></Route>
         <Route
-          path="/login"
-          render={(props) => <Login {...props} login={login} />}
+          path="login"
+          element={ <Login login= {login} />}
         ></Route>
-      </Switch>
-    </div>
+        </Route>
+        </Routes>
+      
+   
   );
 }
 
