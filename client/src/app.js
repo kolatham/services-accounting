@@ -2,9 +2,9 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import addReview from "./components/add-review";
-import ServiceList from "./components/services-list";
-import singleService from "./components/single-service";
+import AddReview from "./components/add-review";
+import ServicesList from "./components/services-list";
+import SingleService from "./components/single-service";
 import Login from "./components/login";
 
 import Nav from "react-bootstrap/Nav";
@@ -50,7 +50,7 @@ function App() {
         ></Route>
         <Route
           path="/Service/:id/"
-          render={(props) => <Service {...props} user={user} />}
+          render={(props) => <ServicesList {...props} user={user} />}
         ></Route>
         <Route
           path="/login"
