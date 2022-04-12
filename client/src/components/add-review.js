@@ -1,6 +1,6 @@
-import react from 'react'
+import React from 'react'
 
-function addReview() {
+function AddReview(props) {
     return(
         <div className="App">
             Service Reviews
@@ -8,4 +8,4 @@ function addReview() {
         </div>
     );
 }
-export default addReview;
+export default AddReview
