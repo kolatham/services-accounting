@@ -1,28 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-
-function Header (props) { 
-    return (
-    <Navbar bg="light" expand="lg">
-        <Navbar.Brand>Service Reviews</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link>
-              <Link to="services-list">Services</Link>
-            </Nav.Link>
-            <Nav.Link>
-              {props.user ? (
-                <a onClick={props.logout}>Logout User</a>
-              ) : (
-                <Link to={"/login"}>Login</Link>
-              )}
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-)};
-export default Header
+export default function Navbar() {
+  return (
+    <div>
+      <nav className="navbar navbar-expand-lg">
+        <a className="navbar-brand" href="#">
+          Accounting Services
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Login
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  );
+}
