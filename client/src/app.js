@@ -34,8 +34,13 @@ function App() {
           element={ <AddReview  user={user} />}
         ></Route>
         <Route
+<<<<<<< HEAD
+          path="/Service/:id/"
+          render={(props) => <ServicesList {...props} user={user} />}
+=======
           path="Service/:id/"
           element={<SingleService user={user} />}
+>>>>>>> 00938670d56c6e9039c51bae99715a8a6ad807bd
         ></Route>
         <Route
           path="login"
