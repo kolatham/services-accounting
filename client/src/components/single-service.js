@@ -1,8 +1,10 @@
-import react from 'react'
-function singleServicesList() {
+import React from 'react'
+function SingleService() {
     return (
         <div className="App">
          Single Services List
          </div>
     );
 }
+
+export default SingleService
