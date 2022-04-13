@@ -7,13 +7,13 @@ import homeScreen from "./screens/homeScreen";
 import productDescScreen from "./screens/productDescScreen";
 
 function App() {
-  const [user, setUser] = React.useState(null)
+  const [user, setUser] = React.useState(null);
 
-  async function login (user = null) {
-    setUser(user)
+  async function login(user = null) {
+    setUser(user);
   }
-  async function logout(){
-    setUser(null)
+  async function logout() {
+    setUser(null);
   }
 
   return (
@@ -21,17 +21,14 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" component={homeScreen} exact />
-        <Route path="/login" render={(props) =>
-        <login {...props} login={login} /> 
-        }> 
-      </Route>
-        
-        
+        <Route
+          path="/login"
+          render={(props) => <login {...props} login={login} />}
+        ></Route>
 
         <Route path="/product/:id" component={productDescScreen} exact />
       </Switch>
     </BrowserRouter>
-    
   );
 }
 
