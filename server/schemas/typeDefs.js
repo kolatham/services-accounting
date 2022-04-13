@@ -29,6 +29,7 @@ const typeDefs = gql`
     updateUser(email: String!, username: String!, password: String!, savedServices:): User
     deleteUser(username: String!): User
     createVote(_id: String!, serviceNum: Int!): User
+    login(email: String!, password: String!): Auth
   }
 `;
 
