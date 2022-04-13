@@ -7,6 +7,15 @@ import homeScreen from "./screens/homeScreen";
 import productDescScreen from "./screens/productDescScreen";
 
 function App() {
+  const [user, setUser] = React.useState(null)
+
+  async function login (user = null) {
+    setUser(user)
+  }
+  async function logout(){
+    setUser(null)
+  }
+  
   return (
     <BrowserRouter>
       <Navbar />
