@@ -15,16 +15,23 @@ function App() {
   async function logout(){
     setUser(null)
   }
-  
+
   return (
     <BrowserRouter>
       <Navbar />
       <Switch>
         <Route path="/" component={homeScreen} exact />
+        <Route path="/login" render={(props) =>
+        <login {...props} login={login} /> 
+        }> 
+      </Route>
+        
+        
 
         <Route path="/product/:id" component={productDescScreen} exact />
       </Switch>
     </BrowserRouter>
+    
   );
 }
 
