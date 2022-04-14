@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // import schema from service.js
-const serviceSchema = require('./services');
+//const serviceSchema = require('../controllers/models/services');
 
 const userSchema = new Schema(
   {
@@ -22,7 +22,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedServices to be an array of data that adheres to the serviceSchema
-    savedServices: [serviceSchema],
+    savedServices: [],
   },
   // set this to use virtual below
   {

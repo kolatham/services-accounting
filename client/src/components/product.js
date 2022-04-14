@@ -7,7 +7,7 @@ export default function Product({ product }) {
     <div className="col-md-3 m-5 card p-2">
       <div>
         <Link to={`product/${product.id}`}>
-          <img src={product.image} className="img-fluid" />
+          <img src={product.image} alt="test" className="img-fluid" />
           <h1>{product.name}</h1>
           <Rating
             style={{ color: "#56548C !important" }}

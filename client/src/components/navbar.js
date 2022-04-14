@@ -4,9 +4,9 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand" href="#">
+       {/* <a className="navbar-brand" href="#"> 
           Accounting Services
-        </a>
+        </a> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -21,14 +21,14 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              {/* <a className="nav-link" href="#">
                 Login
-              </a>
+              </a> */}
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              {/* <a className="nav-link" href="#">
                 <i class="fa-solid fa-cart-shopping"></i>
-              </a>
+              </a> */}
             </li>
           </ul>
         </div>
