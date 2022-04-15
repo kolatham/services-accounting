@@ -5,7 +5,7 @@ const resolvers = {
     services: async () => {
       return Services.find({});
     },
-    singeUser: async (parent, { _id }) => {
+    me: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
       return User.find(params);
     },

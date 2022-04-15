@@ -26,7 +26,8 @@ type Auth {
   }
 
   type Query {
-   me:User 
+   me(id:ID!):User
+   users: [user] 
   }
 
   type Mutation {
