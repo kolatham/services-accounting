@@ -26,6 +26,23 @@ const resolvers = {
         const user = await User.delete(args);
         return user;
     },
+    login: async (_, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('No user found with this email address');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
     createVote: async (parent, { _id, serviceNum }) => {
       const vote = await User.findOneAndUpdate(
         { _id },
