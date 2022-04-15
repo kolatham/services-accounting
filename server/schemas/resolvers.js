@@ -19,7 +19,7 @@ const resolvers = {
       return user;
     },
     updateUser: async (parent, args) => {
-        const user = await User.update(args);
+        const user = await User.updateOne(args);
         return user
     },
     deleteUser: async(parent, args) => {
