@@ -22,7 +22,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedServices to be an array of data that adheres to the serviceSchema
-    savedServices: [],
+    savedServices: [Services],
   },
   // set this to use virtual below
   {
