@@ -18,7 +18,7 @@ console.log(match)
             <p>{product.description}</p>
           </div>
         </div>
-
+giut pu
         <div className="col-md-6 text-left">
           <div className="m-2">
             <h1>Price: {product.price}</h1>
