@@ -19,9 +19,10 @@ query getAllProduct {
 export default function homeScreen() {
   const {data, loading} = useQuery(GET_ALL_PRODUCT)
   if (loading) return <h1>loading...</h1>
+  console.log(data)
   return (
     <div>
-      <h1>From ome Screen</h1>
+      <h1>From One Screen</h1>
       <div className="row justify-content-center">
         {data.getProducts.map((product) => {
           return <Product key= {product._id} product ={product} />;
