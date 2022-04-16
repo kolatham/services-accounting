@@ -1,3 +1,5 @@
+import Img1 from "./images/serviceacct1.png"
+
 const products =[{
   
     id:1,
@@ -6,7 +8,7 @@ const products =[{
     "price": "$100/Return",
     "countInStock": 20,
     "name": "Personal Income Tax Preparation",
-    "image": "./images/tax.jpg",
+    "image": Img1,
     "description": "Prepare current or prior year federal and state tax returns. Calculating tax credits, deductibles, and liabilities. Reviewing if tax reports are in compliance with government tax rule and regulations. Answering clients' financial questions",
     
   },{

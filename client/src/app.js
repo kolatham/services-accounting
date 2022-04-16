@@ -3,8 +3,8 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //import bootstrap from "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/navbar";
-import homeScreen from "./screens/homeScreen";
-import productDescScreen from "./screens/productDescScreen";
+import HomeScreen from "./screens/homeScreen";
+import ProductDescScreen from "./screens/productDescScreen";
 
 function App() {
   // const [user, setUser] = React.useState(null)
@@ -20,14 +20,14 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" component={homeScreen} exact />
+        <Route path="/" element={<HomeScreen />} exact />
         {/* <Route path="/login" render={(props) =>
         <login {...props} login={login} /> 
         }> </Route>
          */}
         
 
-        <Route path="/product/:id" component={productDescScreen} exact />
+        <Route path="/product/:id" element={<ProductDescScreen/>} exact />
       </Routes>
     </BrowserRouter>
     

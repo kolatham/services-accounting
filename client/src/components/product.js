@@ -6,7 +6,7 @@ export default function Product({ product }) {
   return (
     <div className="col-md-3 m-5 card p-2">
       <div>
-        <Link to={`product/${product.id}`}>
+        <Link to={`product/${product._id}`}>
           <img src={product.image} alt="test" className="img-fluid" />
           <h1>{product.name}</h1>
           <Rating
