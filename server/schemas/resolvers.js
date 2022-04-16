@@ -1,11 +1,14 @@
-const { Services, User } = require('../models');
+const { User, Product } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    services: async () => {
-      return Services.find({});
+    getProducts: async () => {
+      return Product.find({});
+    },
+    getSingleProduct: async (_, {id}) => {
+      return Product.findById(id)
     },
     me: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
@@ -45,14 +48,7 @@ const resolvers = {
 
       return { token, user };
     },
-    createVote: async (parent, { _id, serviceNum }) => {
-      const vote = await User.findOneAndUpdate(
-        { _id },
-        { $inc: { [`services${serviceNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
+
   },
 };
 

@@ -12,29 +12,29 @@ type Auth {
     username: String!
     email: String!
     password: String!
-    savedServices: []
-
+    savedProducts: [Products]
   }
-
-  type Services {
+  type Products {
     _id: ID!
     title : String!
+    image: String!
     description: String!
     link: String!
-    servicesLikes_votes: Int
-    servicesDislikes_votes: Int
+    reviews: [String]
+    ratings: [Int]
   }
 
   type Query {
    me(id:ID!):User
-   users: [user] 
+   users: [User] 
+   getProducts: [Products]
+   getSingleProduct(id: ID!): Products
   }
 
   type Mutation {
     createUser(email: String!, username: String!, password: String!): User
     updateUser(email: String!, username: String!, password: String!): User
     deleteUser(username: String!): User
-    createVote(_id: String!, serviceNum: Int!): User
     login(email: String!, password: String!): Auth
   }
 `;

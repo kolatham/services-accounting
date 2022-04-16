@@ -1,0 +1,58 @@
+
+[{
+    "ratings" : [],
+    "reviews" : [],
+    "price": "$100/Return",
+    "countInStock": 20,
+    "link": "http://www.wikipedia.com",
+    "title": "Personal Income Tax Preparation",
+    "image": "http://source.unsplash.com/random?product",
+    "description": "Prepare current or prior year federal and state tax returns. Calculating tax credits, deductibles, and liabilities. Reviewing if tax reports are in compliance with government tax rule and regulations. Answering clients' financial questions"
+    
+  },{
+    "ratings": [],
+    "reviews" : [],
+    "price": "$100/Return",
+    "countInStock": 20,
+    "link": "http://www.wikipedia.com",
+    "title": "Small Business Tax Preparation",
+    "image":"http://source.unsplash.com/random?product",
+    "description": "Prepare current or prior year federal and state tax returns for Sole-Proprietorship, Partnerships, LLC, and S-Corps. Our specialty is primarily flow-through entities. Calculating tax credits, deductibles, and liabilities. Reviewing if tax reports are in compliance with government tax rule and regulations. Answering clients' financial questions"
+  },{
+    "ratings": [],
+    "reviews" : [],
+    "link": "http://www.wikipedia.com",
+    "price": "$100/Hr",
+    "countInStock": 20,
+    "title": "Part-Time CFO Services",
+    "image": "http://source.unsplash.com/random?product",
+    "description": "A part-time CFO is broadly accountable for the administrative, financial, and risk management operations of the company, including the development of a financial and operational strategy, identifying and tracking relevant KPIs, and the ongoing development and monitoring of control systems to preserve company assets and report accurate financial results." 
+  },{
+    "ratings": [],
+    "reviews" : [],
+    "link": "http://www.wikipedia.com",
+    "price": "$50/Hr",
+    "countInStock": 20,
+    "title": "Part-Time Accountant",
+    "image": "http://source.unsplash.com/random?product",
+    "description": "Part-time accountants gather and verify all transactions to ensure that their clients' financial records are accurate and compliant with lawful business practices. Daily responsibilities may vary, depending on the company and industry, but general job duties include reviewing financial statements, verifying transaction compliance, documenting individual expenditures, and recommending practices to maximize the company budget. "
+  },{
+    "ratings": [],
+    "reviews" : [],
+    "price": "$50/Hr",
+    "link": "http://www.wikipedia.com",
+    "countInStock": 20,
+    "title": "Part-Time Accountant",
+    "image": "http://source.unsplash.com/random?product",
+    "description": "Part-time accountants gather and verify all transactions to ensure that their clients' financial records are accurate and compliant with lawful business practices. Daily responsibilities may vary, depending on the company and industry, but general job duties include reviewing financial statements, verifying transaction compliance, documenting individual expenditures, and recommending practices to maximize the company budget. "
+  },{
+    "ratings": [],
+  "reviews" : [],
+    "price": "$50/Hr",
+    "link": "http://www.wikipedia.com",
+    "countInStock": 20,
+    "title": "Part-Time Accountant",
+    "image": "http://source.unsplash.com/random?product",
+    "description": "Part-time accountants gather and verify all transactions to ensure that their clients' financial records are accurate and compliant with lawful business practices. Daily responsibilities may vary, depending on the company and industry, but general job duties include reviewing financial statements, verifying transaction compliance, documenting individual expenditures, and recommending practices to maximize the company budget. "
+  }
+]
