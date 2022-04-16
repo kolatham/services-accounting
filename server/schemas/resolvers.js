@@ -13,9 +13,6 @@ const resolvers = {
     me: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
       return User.find(params);
-    },
-    users: async() => { 
-        return User.find({})
     }
   },
   Mutation: {

@@ -26,7 +26,6 @@ type Auth {
 
   type Query {
    me(id:ID!):User
-   users: [User] 
    getProducts: [Products]
    getSingleProduct(id: ID!): Products
   }
