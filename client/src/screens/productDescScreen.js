@@ -1,20 +1,29 @@
 import React from "react";
-//import products from "../products";
+import {useParams} from "react-router-dom"
+import {useQuery} from "@apollo/client"
+import { GET_SINGLE_PRODUCT } from "../graphql/queries";
+
 
 export default function productDescScreen({ match }) {
-  // const productid = match.params.id;
-
-  // const product = products.find((product) => product.id === productid);
-
-console.log(match)
-
+  const productId = useParams("id");
+  const {data, loading} = useQuery(GET_SINGLE_PRODUCT, {
+    variables: {
+      id: productId.id
+    }
+  })
+  console.log(data)
+  
+  // const productId = match.params.id;
+  if(loading) return <h1>loading....</h1>
+  if(!data) return <h1>Product not found</h1>
+  const product = data.getSingleProduct
   return (
     <div>
       <div className="row">
         <div className="col-md-6">
           <div className="card p-2 m-2">
-            {/* <h1> {product.name}</h1> */}
-            {/* <img src={product.image} className="img-fluid m-3 newImg" />
+            <h1> {product.title}</h1>
+            <img src={product.image} className="img-fluid m-3 newImg" />
             <p>{product.description}</p>
           </div>
         </div>
@@ -35,10 +44,10 @@ giut pu
             <button className="btn btn-dark"> ADD TO CART</button>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
-    </div>
-    </div>
-    </div>
+    // </div>
+    // </div>
+    // </div>
   );
 }
