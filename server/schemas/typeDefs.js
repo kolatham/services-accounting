@@ -25,8 +25,7 @@ type Auth {
   }
 
   type Query {
-   me(id:ID!):User
-   users: [User] 
+   me(id:ID!):User 
    getProducts: [Products]
    getSingleProduct(id: ID!): Products
   }
